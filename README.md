@@ -59,5 +59,5 @@ The project has the following structure:
 
 ## A recommended client for testing
 1. called BloomRPC (https://appimage.github.io/BloomRPC/)
-2. Tested example:
-![Example](https://i.ibb.co/8zDdzbR/Screen-Shot-2023-06-09-at-17-54-48.png)
+2. Example:
+![Alt text](https://i.ibb.co/8zDdzbR/Screen-Shot-2023-06-09-at-17-54-48.png)
