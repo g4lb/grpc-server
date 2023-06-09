@@ -1,6 +1,6 @@
 {
   "host": "localhost",
   "database": "postgres",
-  "user": "local",
+  "user": "",
   "password": "docker"
 }
