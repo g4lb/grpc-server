@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package example;
+
+service MyService {
+  rpc GetRandomNumber (RandomNumberRequest) returns (RandomNumberResponse) {}
+}
+
+message RandomNumberRequest {}
+
+message RandomNumberResponse {
+  int32 number = 1;
+}
+
+message Empty {}
+
+message Number {
+  int32 id = 1;
+  int32 number = 2;
+}

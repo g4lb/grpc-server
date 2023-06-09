@@ -1,0 +1,21 @@
+# Use the official Python image as the base image
+FROM python:3.9-slim
+
+# Set the working directory in the container
+WORKDIR /app
+
+# Copy the server code to the container
+COPY server.py /app/server.py
+COPY config.json /app/config.json
+COPY example_pb2.py /app/example_pb2.py
+COPY example_pb2_grpc.py /app/example_pb2_grpc.py
+COPY requirements.txt /app/requirements.txt
+
+# Install the required dependencies
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Expose the gRPC server port
+EXPOSE 50051
+
+# Set the command to run the server when the container starts
+CMD ["python", "server.py"]

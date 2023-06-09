@@ -1,0 +1,17 @@
+version: "3"
+services:
+  server:
+    build:
+      context: .
+      dockerfile: Dockerfile.server
+    ports:
+      - "50051:50051"
+  database:
+    build:
+      context: .
+      dockerfile: Dockerfile.database
+    environment:
+      - POSTGRES_HOST_AUTH_METHOD=trust
+      - POSTGRES_USER=local
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=postgres
