@@ -56,3 +56,8 @@ The project has the following structure:
 6. Dockerfile.server and Dockerfile.database: Dockerfiles for building the server and database Docker images.
 7. init.sql: SQL script for initializing the PostgreSQL database and creating the required table.
 8. test_server: containing the unit tests for the server.
+
+## A recommended client for testing
+1. called BloomRPC (https://appimage.github.io/BloomRPC/)
+2. Tested example:
+![Example](https://i.ibb.co/8zDdzbR/Screen-Shot-2023-06-09-at-17-54-48.png)
