@@ -1,4 +1,7 @@
 version: "3"
+networks:
+  grpc-server-network:
+
 services:
   server:
     build:
@@ -6,12 +9,18 @@ services:
       dockerfile: Dockerfile.server
     ports:
       - "50051:50051"
+    networks:
+      - grpc-server-network
+    environment:
+      - POSTGRES_HOST_AUTH_METHOD=trust
+
   database:
     build:
       context: .
       dockerfile: Dockerfile.database
+    networks:
+      - grpc-server-network
     environment:
-      - POSTGRES_HOST_AUTH_METHOD=trust
-      - POSTGRES_USER=local
-      - POSTGRES_PASSWORD=password
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=docker
       - POSTGRES_DB=postgres
