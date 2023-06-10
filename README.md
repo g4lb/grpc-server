@@ -36,7 +36,7 @@ The server exposes a single gRPC method that returns a random number. The server
 
 6. To run the unit tests, execute the following command:
    ```shell
-   docker-compose run grpc-server python -m unittest discover
+   python test_server.py
    ```
 This command will run all the unit tests in the project.
 
